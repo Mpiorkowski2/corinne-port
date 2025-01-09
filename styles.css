@@ -1,0 +1,470 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+
+}
+
+.background-top{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                      url('https://freelance-bucket-1.s3.us-east-2.amazonaws.com/corinne-port/skyline-downtown-new-york-new-york-usa.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 650px; /* or adjust as needed */
+    width: 100%;
+}
+/* HEADER DROP DOWN TEMPLATE */
+/* off-screen-menu */
+.off-screen-menu {
+    background-color:  rgb(34, 37, 49);
+    height: 100vh;
+    width: 100%;
+    max-width: 400px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    text-align: center;
+    font-size: 3rem;
+    transition: .3s ease;
+    z-index: 9999;
+}
+.off-screen-menu.active {
+    right: 0;
+    z-index: 9999;
+}
+/* nav */
+nav {
+    display: none;
+background-color: transparent;  
+  border-radius: 4px;
+    margin-left: 20px;
+    z-index: 9999;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+
+}
+
+/* ham menu */
+.ham-menu {
+    height: 20px;
+    width: 20px;
+    z-index: 9999;
+    margin-left: auto;
+    position: relative;
+}
+.ham-menu span {
+    height: 3px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+    z-index: 9999;
+}
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+.ham-menu.active span {
+    background-color: white;
+}
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* HEADER */
+
+.logo{
+    padding: 10px 0;
+    margin-left: 20px;
+}
+.head{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.links{
+    display: flex;
+    font-size: 18px;
+    font-weight: 500;
+}
+.links li{
+padding: 0 20px ;
+}
+
+@media (max-width: 1300px){
+ 
+    header .links{
+        display: none;
+    }
+    .logo-logo{
+        margin-right: auto;
+        margin-left: 20px;
+    }
+    nav {
+        display: flex !important;
+    }
+    .buttons{
+        margin-left: auto;
+    }
+
+}
+
+@media (max-width:500px) {
+    .logo h1{
+        font-size: 25px !important;
+    }
+    .buttons svg{
+        width: 20px !important;
+        height: 20px;
+
+    }
+    .buttons a{
+        border-radius: 100%;
+        border: 1px solid rgb(255, 255, 255);
+        height: 40px;
+        
+    }
+}
+
+
+/*HEADER*/
+
+
+.head{
+    height: 70px;
+}
+
+.logo{
+    color: white !important;    font-style: oblique;
+    margin-left: 20px;
+}
+header .links{
+    color: white !important;
+}
+
+.buttons{
+    display: flex;
+    gap: 20px;
+}
+
+.buttons svg{
+    color: white;
+    width: 35px;
+    height: 35px;
+    padding: 10px;
+    background-color: transparent;
+    
+}
+.buttons a{
+    border-radius: 100%;
+    border: 1px solid rgb(255, 255, 255);
+    height: 55px;
+    
+}
+.buttons a:hover{
+    background-color: rgba(128, 128, 128, 0.519);
+    transition: 0.3s;
+}
+.buttons a{
+    gap: 200px;
+}
+
+.links a {
+    color: white ;    font-family: 'Poppins', sans-serif;
+    
+    font-weight: 700;
+    line-height: 1.5;
+    text-decoration: none;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    padding: 4px;
+    transition: color .1s ease-in-out, box-shadow .7s ease-in-out;
+}
+
+.links a:hover {
+    color: #ffffff;
+    
+    box-shadow: inset 200px 0 0 0 #000000;
+}
+
+.links li {
+    list-style: none;
+    display: inline-block; /* Optional: if you want them to appear horizontally */
+ margin-right: 20px; /* Adjust space between list items */
+}
+
+@media (max-width: 600px){
+    .buttons svg{
+        width: 22px !important;
+        height: 22px;
+
+    }
+    .buttons{
+        gap: 10px;
+        margin-left: ;
+    }
+    .buttons a{
+        border-radius: 100%;
+        border: 1px solid rgb(255, 255, 255);
+        height: 40px;
+        
+    }
+}
+
+
+
+
+/*ABOUT SECTION*/
+
+.head-about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+.head-shot {
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    overflow: hidden; /* Clipping anything outside the circle */
+}
+.head-shot img {
+    width: 300px; /* Ensure this matches your desired size */
+    height: 300px; /* Ensure this matches your desired size */
+    object-fit: cover; /* Ensure the image covers the circle and gets cropped if necessary */
+    display: block; /* Removes any inline spacing */
+}
+
+.text-about {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.text-about h1{
+    font-size: 50px;
+    box-shadow: inset 0 -1px 0 #ffffff;  /* Creates a thin underline */
+    margin-bottom: 10px;
+}
+.text-about p{
+    width: 600px;
+    font-size: 20px;
+}
+
+@media (max-width: 600px) {
+   .head-shot img{
+    width: 250px;
+    height: 250px;
+   }
+    .text-about{
+    text-align: center !important;
+    align-items: center;
+
+    }
+    
+    .text-about p{
+    max-width: 400px;
+    }
+
+    .text-about h1{
+        font-size: 40px;
+    }
+}
+@media (max-width: 400px) {
+
+    .text-about{
+    text-align: center !important;
+    justify-content: center;
+    align-items: center;
+    }
+    
+    .text-about p{
+    font-size: 17px;
+    width: 300px;
+    }
+
+    .text-about h1{
+        font-size: 4s0px;
+    }
+    .buttons svg{
+        width: 14px !important;
+        height: 14px;
+
+    }
+    .buttons a{
+        border-radius: 100%;
+        border: 1px solid rgb(255, 255, 255);
+        height: 34px;
+        
+    }
+}
+
+/* MIDDLE SECTION */
+
+.body-links{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.body-links {
+    width: 100%;
+    
+}
+
+
+.box-2{
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+    transform: translateY(-40px);
+
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    text-align: center;
+}
+.box-2 h1{
+    font-size: ;
+    color: white;
+}
+.box-2:hover {
+
+    transform: scale(1.02) translateY(-42px); /* Slightly increase size and move up */
+    transition: transform 0.3s ease; /* Smooth animation */
+}
+
+.about-box{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('https://freelance-bucket-1.s3.us-east-2.amazonaws.com/corinne-port/box-about-pic');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.p-articles{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('https://freelance-bucket-1.s3.us-east-2.amazonaws.com/corinne-port/pa-box-pic');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+.ut-articles{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://freelance-bucket-1.s3.us-east-2.amazonaws.com/corinne-port/ut-box-pic2');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+/* ARTICLE SECTION */
+
+.article-three-head{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    font-size: 37px;
+    font-style: oblique;
+    color: rgb(0, 0, 0);
+    font-weight: 100 !important;
+}
+.article-three-head h1{
+    font-weight: 200 !important;
+
+}
+
+.articles-three {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+.article-box {
+    display: flex;
+    flex-direction: row; /* Ensures image and text are side by side */
+    margin: 20px 50px;
+    border: 1px solid rgb(164, 164, 164);
+    align-items: center; /* Align items vertically in the center */
+}
+.article-box:hover {
+
+        transform: scale(1.02) translateY(-12px); /* Slightly increase size and move up */
+        transition: transform 0.3s ease; /* Smooth animation */
+}
+
+
+.article-text {
+    flex: 1; /* Allows text to take up remaining space */
+    padding: 20px; /* Adds spacing inside the text */
+    display: flex;
+    flex-direction: column;
+}
+.article-text h1{
+    color: black;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+.article-text p{
+    color: #000000;
+    font-weight: 300;
+    font-size: 18px;
+}
+.article-img {
+    flex-shrink: 0; /* Prevents image from shrinking */
+    width: 50%; /* Optional: Adjust if needed */
+    height: 400px; /* Set a fixed height */
+    overflow: hidden; /* Prevents overflow if the image is larger */
+}
+
+.article-img img {
+    width: 100%; /* Image adjusts to container width */
+    height: 100%; /* Ensures it matches the container height */
+    object-fit: cover; /* Ensures image doesn't stretch but covers the container */
+    filter: brightness(0.8); /* Optional: Keeps the darkened filter */
+    display: block; /* Removes extra spacing */
+}
+
+.right{
+    gap: 40px !important;
+}
+
+/*FOOTER*/ 
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #000000;
+    padding: 20px;
+}
+
+footer h1{
+    font-size: 18px;
+    color: white;
+    font-weight: 200;
+}
