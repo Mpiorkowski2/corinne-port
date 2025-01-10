@@ -84,6 +84,17 @@ hamMenu.addEventListener("click", () => {
 hamMenu.classList.toggle("active");
 offScreenMenu.classList.toggle("active");
 });
+
+document.addEventListener("click", (event) => {
+        const isClickInsideMenu = offScreenMenu.contains(event.target);
+        const isClickInsideButton = hamMenu.contains(event.target);
+
+        if (!isClickInsideMenu && !isClickInsideButton) {
+            // Remove active classes to hide the menu
+            hamMenu.classList.remove("active");
+            offScreenMenu.classList.remove("active");
+        }
+    });
 </script>
 
 

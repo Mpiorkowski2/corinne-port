@@ -11,10 +11,10 @@
 /* HEADER DROP DOWN TEMPLATE */
 /* off-screen-menu */
 .off-screen-menu {
-    background-color:  rgb(34, 37, 49);
+    background-color:  rgb(255, 255, 255);
     height: 100vh;
     width: 100%;
-    max-width: 400px;
+    max-width: 230px;
     position: fixed;
     top: 0;
     right: -450px;
@@ -22,10 +22,64 @@
     flex-direction: column;
     align-items: center;    
     justify-content: center;
-    text-align: center;
     font-size: 3rem;
     transition: .3s ease;
     z-index: 9999;
+}
+.off-screen-menu{
+    background-image:
+    url('');
+background-size: cover;
+background-position: center;
+}
+.off-screen-menu ul{
+    transform: translateY(-100px);
+}
+.off-screen-menu a{
+    color: #906946;
+    
+}
+
+.off-screen-menu a {
+    color: #906946;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    line-height: 1.5;
+    text-decoration: none;
+    padding: 0 .25rem;
+    margin: 0 -.25rem;
+    padding: 4px;
+    width: 100%;
+    transition: color .1s ease-in-out, background-color .4s ease-in-out; /* Use background-color for smoothness */
+    display: inline-block; /* Ensures background spans only the text */
+    position: relative; /* Enables pseudo-element positioning */
+}
+
+.off-screen-menu a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #876140; /* Background color for hover effect */
+    z-index: -1; /* Places the background behind the text */
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: left;
+    transition: transform .4s ease-in-out; /* Smooth expansion */
+}
+
+.off-screen-menu a:hover {
+    color: #ffffff;
+}
+
+.off-screen-menu a:hover::before {
+    transform: scaleX(1); /* Expands background on hover */
+}
+
+.off-screen-menu li{
+font-size: 25px;
+padding: 10px;
 }
 .off-screen-menu.active {
     right: 0;
@@ -68,7 +122,7 @@ background-color: transparent;
     top: 75%;
 }
 .ham-menu.active span {
-    background-color: white;
+    background-color: rgb(0, 0, 0);
 }
 .ham-menu.active span:nth-child(1) {
     top: 50%;
@@ -243,7 +297,7 @@ header .links{
 }
 .about-left h1{
     font-size: 70px;
-    font-weight: 300;
+    font-weight: 400;
     font-style: initial;
 }
 .about-left p{
@@ -502,7 +556,7 @@ justify-content: center;
 }
 .ut-article-head h1{
     font-size: 50px;
-    font-weight: 300;
+    font-weight: 500;
     font-style: oblique;
     text-align: center;
 }
@@ -561,10 +615,12 @@ justify-content: center;
     display: flex;
     justify-content: center;
     text-align: center;
+    flex-direction: column;
 }
 .contact-head h1{
-    font-size: 50px;
+    font-size: 60px;
     margin-top: 20px;
+    font-weight: 500;
 }
 
 .contact-body{
@@ -573,7 +629,10 @@ justify-content: center;
     margin: 20px 100px;
     gap: 30px;
     height:;
+    flex-direction: column;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -582,13 +641,17 @@ justify-content: center;
     flex-direction: column;
 margin-top: 60px;
 }
-.contact-left h3{
-    font-size: 45px;
-}
 .contact-left p{
-    font-size: 22px;
+    font-size: 35px;
+    font-style: italic;
+    font-weight: 300;
 }
-
+.contact-left a{
+color: #e0a97a;
+}
+.contact-left a:hover{
+    color: #ffc28d;
+    }
 
 .contact-right{
     display: flex;
