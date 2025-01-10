@@ -98,7 +98,7 @@ nav {
     display: none;
 background-color: transparent;  
   border-radius: 4px;
-    margin-left: 20px;
+    margin-left: 0px;
     z-index: 9999;
     padding: calc(.875rem - 1px) calc(1.5rem - 1px);
 
@@ -211,7 +211,7 @@ padding: 0 20px ;
 }
 
 .logo{
-    color: white !important;    font-style: oblique;
+    color: white !important;   
     margin-left: 20px;
 }
 header .links{
@@ -365,17 +365,7 @@ header .links{
     .text-about h1{
         font-size: 4s0px;
     }
-    .buttons svg{
-        width: 14px !important;
-        height: 14px;
 
-    }
-    .buttons a{
-        border-radius: 100%;
-        border: 1px solid rgb(255, 255, 255);
-        height: 34px;
-        
-    }
 }
 
 /* MIDDLE SECTION */
