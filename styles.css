@@ -32,6 +32,7 @@
     justify-content: center;
     font-size: 3rem;
     transition: .3s ease;
+    
     z-index: 9999;
 }
 .off-screen-menu{
@@ -58,7 +59,7 @@ background-position: center;
     margin: 0 -.25rem;
     padding: 4px;
     width: 100%;
-    transition: color .1s ease-in-out, background-color .4s ease-in-out; /* Use background-color for smoothness */
+    transition: color .4s ease-in-out, background-color .4s ease-in-out; /* Use background-color for smoothness */
     display: inline-block; /* Ensures background spans only the text */
     position: relative; /* Enables pseudo-element positioning */
 }
