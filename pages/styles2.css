@@ -314,7 +314,7 @@ header .links{
 }
 .about-right iframe{
  width: 400px;
- height: 630px;
+ height: 800px;
  margin-top: 60px;
 }
 
@@ -354,13 +354,13 @@ header .links{
     }
     .about-left img{
         width: 350px ;
-        height: 400px;
+        height: 350px;
 
     }
     .about-right iframe{
         width: 350px !important;
         margin-top: 60px;
-        
+        transform: scale(0.8);
        }
 
     .about-bottom button{
