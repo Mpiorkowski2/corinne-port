@@ -344,24 +344,18 @@ header .links{
     color: white;
     background-color: rgb(42, 42, 42);
 }
-.about-right {
-    display: flex;
-    justify-content: center; /* Centers the iframe horizontally */
-    align-items: center; /* Centers the iframe vertically if needed */
-    width: 100%;
-    max-width: 800px; /* Optional: Limit the width on larger screens */
-    margin: 0 auto; /* Centers the container itself */
-    padding: 20px; /* Optional: Add some spacing around the iframe */
-    box-sizing: border-box; /* Ensures padding is included in width calculations */
-  }
-  
-  .about-right iframe {
-    width: 100%;
-    height: 100%; /* Let it scale responsively within its container */
-    max-height: 800px; /* Set a max height */
-    border: none; /* Removes the iframe border */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visuals */
-  }
+@media (max-width:600px) {
+    .about-right iframe{
+        display: none;
+    }
+    .about-right img {
+        display: block !important;
+    }
+    .about-right img{
+        width: 450px;
+        margin-top: 20px;
+    }
+}
 @media(max-width:508px){
     .about-all{
         text-align: center;
@@ -378,7 +372,6 @@ header .links{
     }
     .about-right iframe{
         width: 350px !important;
-        margin-top: 60px;
        }
 
     .about-bottom button{
@@ -388,6 +381,9 @@ header .links{
         font-size: 50px;
         font-weight: 400;
         font-style: initial;
+    }
+    .about-right img{
+        width: 400px;
     }
 }
 
@@ -400,6 +396,9 @@ header .links{
     .about-left p{
         width: 350px;
         font-size: 20px;
+    }
+    .about-right img{
+        width: 350px;
     }
 }
 
@@ -652,6 +651,24 @@ justify-content: center;
     .ut-article-head{
         height: auto;
     }
+}
+
+@media (max-width:610px) {
+    .ut-box iframe{
+        display: none;
+    }
+    .ut-box img{
+        display: flex !important;
+        width: 400px;
+        transition: transform 0.3s ease; /* Smooth animation */
+
+    }
+    .ut-box img:hover{
+        transform: scale(1.01) translateY(-12px);
+        transition: transform 0.3s ease; /* Smooth animation */
+
+    }
+
 }
 
 /* CONTACT */
