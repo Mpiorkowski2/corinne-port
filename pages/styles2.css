@@ -228,7 +228,8 @@ header .links{
     border-radius: 100%;
     border: 1px solid rgb(255, 255, 255);
     height: 55px;
-    
+    transition: 0.3s;
+
 }
 .buttons a:hover{
     background-color: rgba(128, 128, 128, 0.519);
@@ -620,7 +621,7 @@ justify-content: center;
     background-color: rgba(242, 242, 242, 0.447);
 
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .ut-box{
@@ -660,13 +661,42 @@ justify-content: center;
     .ut-box img{
         display: flex !important;
         width: 400px;
+        filter: brightness(0.95); /* Makes the image dimmer */
+
         transition: transform 0.3s ease; /* Smooth animation */
 
+    }
+    .ut-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers content horizontally */
+        justify-content: center; /* Centers content vertically */
     }
     .ut-box img:hover{
         transform: scale(1.01) translateY(-12px);
         transition: transform 0.3s ease; /* Smooth animation */
+        filter: brightness(1); /* Makes the image dimmer */
 
+    }
+
+}
+@media (max-width:400px) {
+    .ut-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers content horizontally */
+        justify-content: center; /* Centers content vertically */
+    }
+    
+    .ut-box img {
+        display: flex !important;
+        width: 350px;
+        transition: transform 0.3s ease; /* Smooth animation */
+    }
+
+
+    .ut-box iframe{
+        display: none;
     }
 
 }
