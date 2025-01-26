@@ -72,6 +72,7 @@ background-position: center;
 
 .off-screen-menu a:hover {
     color: #ffffff;
+    transition: .1s;
 }
 
 .off-screen-menu a:hover::before {
